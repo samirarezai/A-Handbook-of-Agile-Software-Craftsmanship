@@ -1,7 +1,6 @@
 # Clean Code 
 # A Handbook of Agile Software Craftsmanship
 
-## About This Project
 
 A simple summary of *Clean Code: A Handbook of Agile Software Craftsmanship* by Robert C. Martin.
 
