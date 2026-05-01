@@ -1,5 +1,9 @@
 # Chapter 1
 
+- [Home](../index.md)
+- [Table of Contents](../SUMMARY.md)
+- [Chapter 1 index](README.md)
+
 ## There Will Be Code
 
 The author believes that code will never disappear. Some people think that in the future, code will be generated automatically and programmers will not be needed. However, the author says this is wrong because code is really just a detailed form of requirements. Requirements must be very exact so a machine can understand them, and this is basically what coding is. Although programming languages will probably become more advanced, the need for precise instructions will stay the same. In the end, there will always be code.
@@ -85,3 +89,4 @@ The author mentions this book connects to his earlier book about agile and objec
 The book can’t magically make someone a great programmer, just like an art book can’t guarantee you become an artist. It can share techniques, examples, and ways of thinking.
 
 The final message is simple: becoming great requires practice—like the joke about finding Carnegie Hall: “Practice, son. Practice!”
+
