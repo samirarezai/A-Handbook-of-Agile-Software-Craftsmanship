@@ -10,9 +10,9 @@ The goal is to summarize the book part by part in clear, practical language that
 
 ## Chapters
 
-- [Chapter 1](docs/Chapter01/README.md)
-- [Chapter 2](docs/Chapter02/README.md)
-- [Chapter 3](docs/Chapter03/README.md)
+- [Chapter 1](docs/Chapter01/CleanCode.md)
+- [Chapter 2](docs/Chapter02/MeaningfulNames.md)
+- [Chapter 3](docs/Chapter03/Functions.md)
 
 ## Table of Contents
 
