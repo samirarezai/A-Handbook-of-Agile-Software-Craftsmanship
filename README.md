@@ -10,9 +10,9 @@ The goal is to summarize the book part by part in clear, practical language that
 
 ## Chapters
 
-- [Chapter 1](Chapter01/README.md)
-- [Chapter 2](Chapter02/README.md)
-- [Chapter 3](Chapter03/README.md)
+- [Chapter 1](docs/Chapter01/README.md)
+- [Chapter 2](docs/Chapter02/README.md)
+- [Chapter 3](docs/Chapter03/README.md)
 
 ## Table of Contents
 
