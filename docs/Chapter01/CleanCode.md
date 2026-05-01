@@ -4,6 +4,10 @@
 - [Table of Contents](../SUMMARY.md)
 - [Chapter 1 index](README.md)
 
+<p align="center">
+  <img src="../../assets/images/ch1.jpg" alt="Chapter 1" />
+</p>
+
 ## There Will Be Code
 
 Code isn’t going anywhere. Even if tools generate more of it, code is still the most precise form of “requirements” we have: detailed instructions a machine can actually follow. Languages may change, but the need for exactness won’t. In the end, there will always be code.
