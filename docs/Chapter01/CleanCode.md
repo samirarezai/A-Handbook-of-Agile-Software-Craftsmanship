@@ -5,7 +5,7 @@
 - [Chapter 1 index](README.md)
 
 <p align="center">
-  <img src="../../assets/images/ch1.jpg" alt="Chapter 1" />
+  <img src="../../assets/images/Chapter01/ch1.jpg" alt="Chapter 1" />
 </p>
 
 ## There Will Be Code
@@ -25,6 +25,10 @@ If bad code slows us down so much, why do we write it? Usually because we’re r
 Owning a mess is expensive. Teams that start fast can end up crawling, because even “small” changes break other parts of the system and require untangling knots first.
 
 As productivity drops, management often adds more people. But newcomers don’t know the design intent, and the pressure to move faster makes everyone create even more mess, pushing productivity closer to zero.
+
+<p align="center">
+  <img src="../../assets/images/Chapter01/chart1.jpg" alt="Chapter 1" />
+</p>
 
 ## The Grand Redesign in the Sky
 
