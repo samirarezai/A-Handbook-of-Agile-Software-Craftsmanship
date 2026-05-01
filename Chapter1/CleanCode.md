@@ -1,0 +1,3 @@
+#There Will Be Code
+
+######The author believes that code will never disappear. Some people think that in the future, code will be generated automatically and programmers will not be needed.However, the author says this is wrong because code is really just a detailed form of requirements. Requirements must be very exact so a machine can understand them, and this is basically what coding is. Although programming languages will probably become more advanced, the need for precise instructions will stay the same. In the end, there will always be code.
