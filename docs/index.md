@@ -11,4 +11,5 @@ This site contains a simple summary of each part of *Clean Code: A Handbook of A
 - [Chapter 3](Chapter03/README.md)
 - [Chapter 4](Chapter04/README.md)
 - [Chapter 5](Chapter05/README.md)
+- [Chapter 6](Chapter06/README.md)
 
