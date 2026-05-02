@@ -6,9 +6,9 @@ The goal is to summarize the book part by part in clear, practical language that
 
 ## Chapters
 
-- [Chapter 1](docs/Chapter01/README.md) — [summary](docs/Chapter01/CleanCode.md) · [vocabulary](docs/Chapter01/Vocabulary.md)
-- [Chapter 2](docs/Chapter02/README.md) — [summary](docs/Chapter02/MeaningfulNames.md) · [vocabulary](docs/Chapter02/Vocabulary.md)
-- [Chapter 3](docs/Chapter03/README.md) — [summary](docs/Chapter03/Functions.md) · [vocabulary](docs/Chapter03/Vocabulary.md)
+- [Chapter 1](docs/Chapter01/README.md) — [Summary](docs/Chapter01/CleanCode.md) · [Vocabulary](docs/Chapter01/Vocabulary.md)
+- [Chapter 2](docs/Chapter02/README.md) — [Summary](docs/Chapter02/MeaningfulNames.md) · [Vocabulary](docs/Chapter02/Vocabulary.md)
+- [Chapter 3](docs/Chapter03/README.md) — [Summary](docs/Chapter03/Functions.md) · [vocabulary](docs/Chapter03/Vocabulary.md)
 
 ## Table of Contents
 
