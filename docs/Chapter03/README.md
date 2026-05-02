@@ -6,4 +6,5 @@
 ## Read options
 
 - [Single-page chapter summary](Functions.md)
+- [Vocabulary](Vocabulary.md)
 

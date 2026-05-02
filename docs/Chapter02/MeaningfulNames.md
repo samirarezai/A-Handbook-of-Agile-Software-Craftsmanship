@@ -5,7 +5,7 @@
 - [Chapter 2 index](README.md)
 
 <p align="center">
-  <img src="../../assets/images/Chapter02/ch2.jpg" alt="Chapter 1" />
+  <img src="../../assets/images/Chapter02/ch2.jpg" alt="clean code - Meaningful Names" />
 </p>
 
 Names are everywhere in software, so naming well is not a nice-to-have. Good names take time, but they pay you back by making code easier to read, discuss, and change.

@@ -4,6 +4,10 @@
 - [Table of Contents](../SUMMARY.md)
 - [Chapter 3 index](README.md)
 
+<p align="center">
+  <img src="../../assets/images/Chapter03/ch3.jpg" alt="clean code - Functions" />
+</p>
+
 Functions are the first line of organization in a program. This chapter is about writing functions that are easy to read, easy to test, and easy to change.
 
 ## A refactoring story (FitNesse example)

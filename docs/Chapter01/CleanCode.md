@@ -1,11 +1,11 @@
-# Chapter 1
+# Chapter 1: Clean Code
 
 - [Home](../index.md)
 - [Table of Contents](../SUMMARY.md)
 - [Chapter 1 index](README.md)
 
 <p align="center">
-  <img src="../../assets/images/Chapter01/ch1.jpg" alt="Chapter 1" />
+  <img src="../../assets/images/Chapter01/ch1.jpg" alt="Clean Code" />
 </p>
 
 ## There Will Be Code

@@ -6,4 +6,5 @@
 ## Read options
 
 - [Single-page chapter summary](MeaningfulNames.md)
+- [Vocabulary](Vocabulary.md)
 

@@ -6,6 +6,7 @@
 ## Read options
 
 - [Single-page chapter summary](CleanCode.md)
+- [Vocabulary](Vocabulary.md)
 
 ## Sections
 
