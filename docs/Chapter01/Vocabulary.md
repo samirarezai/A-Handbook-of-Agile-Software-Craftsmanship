@@ -1,4 +1,4 @@
-# Chapter 1 — Vocabulary
+# Chapter 1 - Vocabulary
 
 Short definitions and common synonyms for words that appear in *Clean Code*, Chapter 1, or that capture ideas the chapter stresses.
 
@@ -67,7 +67,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## E
 
 **Expressiveness** (in code)  
-*Meaning:* How clearly the code communicates intent—names, structure, and flow that match the ideas in your head.  
+*Meaning:* How clearly the code communicates intent - names, structure, and flow that match the ideas in your head.  
 *Synonyms:* clarity, readability, intention-revealing design.
 
 ---
@@ -135,7 +135,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* hateful, repugnant, obnoxious, vile.
 
 **Oxymoron**  
-*Meaning:* A phrase combining two ideas that seem opposite (e.g. “crisp abstraction”—concrete-sounding “crisp” with abstract “abstraction”).  
+*Meaning:* A phrase combining two ideas that seem opposite (e.g. “crisp abstraction” - concrete-sounding “crisp” with abstract “abstraction”).  
 *Synonyms:* paradoxical pairing, contradictory union (informal).
 
 ---
@@ -143,7 +143,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## P
 
 **Pathos**  
-*Meaning:* The quality in art or speech that evokes feeling—pity, suffering, or emotional depth.  
+*Meaning:* The quality in art or speech that evokes feeling - pity, suffering, or emotional depth.  
 *Synonyms:* poignancy, emotion, feeling, drama.
 
 **Premise**  
@@ -155,7 +155,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## R
 
 **Rigorous**  
-*Meaning:* Strict, exact, and thorough—leaving little room for sloppiness.  
+*Meaning:* Strict, exact, and thorough - leaving little room for sloppiness.  
 *Synonyms:* strict, precise, thorough, exacting.
 
 ---

@@ -1,4 +1,4 @@
-# Chapter 2 — Vocabulary
+# Chapter 2 - Vocabulary
 
 Short definitions and common synonyms for words that appear in *Clean Code*, Chapter 2 (*Meaningful Names*), or that capture naming ideas the chapter stresses.
 
@@ -20,7 +20,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms (unadorned):* plain, bare, simple name.
 
 **Arbitrary**  
-*Meaning:* Chosen without a principled reason—often to appease the compiler (`a1`, `klass`).  
+*Meaning:* Chosen without a principled reason - often to appease the compiler (`a1`, `klass`).  
 *Synonyms:* random, capricious, unmotivated, haphazard.
 
 ---
@@ -36,7 +36,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* slang, informalism, vernacular expression.
 
 **Contrivance**  
-*Meaning:* Something artificially constructed; the book admits the `l` / `O` / `0` example may feel forced—but such code exists.  
+*Meaning:* Something artificially constructed; the book admits the `l` / `O` / `0` example may feel forced - but such code exists.  
 *Synonyms:* fabrication, artificial example, strained setup.
 
 **Copious**  
@@ -60,7 +60,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## E
 
 **Encoding** (in names)  
-*Meaning:* Embedding type, scope, or role into the identifier (`m_`, `str`, `I` prefix)—extra “language” readers must decode.  
+*Meaning:* Embedding type, scope, or role into the identifier (`m_`, `str`, `I` prefix) - extra “language” readers must decode.  
 *Synonyms:* type prefixing, Hungarian-style tagging, decorated identifier.
 
 **Entrenched**  
@@ -76,11 +76,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## F
 
 **Finality** (*with finality*)  
-*Meaning:* In a decisive, finished way—renaming solves the `l`/`O` problem *with finality* instead of relying on fonts or docs.  
+*Meaning:* In a decisive, finished way - renaming solves the `l`/`O` problem *with finality* instead of relying on fonts or docs.  
 *Synonyms:* decisively, conclusively, once and for all, definitively.
 
 **Frightfully**  
-*Meaning:* To a very high degree (often British tone)—names *frightfully* similar in shape.  
+*Meaning:* To a very high degree (often British tone) - names *frightfully* similar in shape.  
 *Synonyms:* extremely, terribly, very, exceedingly.
 
 ---
@@ -96,7 +96,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## H
 
 **Hypotenuse**  
-*Meaning:* Long side of a right triangle opposite the right angle—context for why `hp` is a tempting but *disinformative* abbreviation in some codebases.  
+*Meaning:* Long side of a right triangle opposite the right angle - context for why `hp` is a tempting but *disinformative* abbreviation in some codebases.  
 *Synonyms:* (geometry term; no everyday synonym.)
 
 ---
@@ -112,11 +112,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* obstacle, hindrance, drag, friction.
 
 **Indistinct** / **Indistinguishable**  
-*Meaning:* Hard to tell apart—noise suffixes (`Info`, `Data`) or pairs like `money` vs `moneyAmount` with no clear semantic gap.  
+*Meaning:* Hard to tell apart - noise suffixes (`Info`, `Data`) or pairs like `money` vs `moneyAmount` with no clear semantic gap.  
 *Synonyms:* blurry, fuzzy, ambiguous, interchangeable-looking.
 
 **Intention-revealing** (names)  
-*Meaning:* Identifiers that answer *why* something exists, *what* it does, and *how* it’s used—without needing a comment.  
+*Meaning:* Identifiers that answer *why* something exists, *what* it does, and *how* it’s used - without needing a comment.  
 *Synonyms:* self-explanatory name, purpose-driven identifier, clear intent in the name.
 
 ---
@@ -140,7 +140,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## O
 
 **Opaque**  
-*Meaning:* Hard to see into—meaning not visible at first glance (`number`, `verb` until you read the whole function).  
+*Meaning:* Hard to see into - meaning not visible at first glance (`number`, `verb` until you read the whole function).  
 *Synonyms:* unclear, murky, obscure, unintelligible at a glance.
 
 ---
@@ -148,7 +148,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## P
 
 **Predicate**  
-*Meaning:* In naming/JavaBeans, a boolean query (`isPosted`, `hasChildren`)—often prefixed with `is`, `has`, `can`, etc.  
+*Meaning:* In naming/JavaBeans, a boolean query (`isPosted`, `hasChildren`) - often prefixed with `is`, `has`, `can`, etc.  
 *Synonyms:* boolean accessor, query method, truth test (informal).
 
 **Pronounceable**  
@@ -156,7 +156,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* speakable, articulable, mouth-friendly (informal).
 
 **Pun** (in naming)  
-*Meaning:* Reusing the same word for a *different* idea (`add` for arithmetic vs `add` for “insert into collection”)—humorous in language, confusing in APIs.  
+*Meaning:* Reusing the same word for a *different* idea (`add` for arithmetic vs `add` for “insert into collection”) - humorous in language, confusing in APIs.  
 *Synonyms:* double duty, overloaded word (natural language sense), equivocation (loose).
 
 ---
@@ -164,11 +164,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## S
 
 **Scholar** (vs paperback model)  
-*Meaning:* The book contrasts the “scholar’s job” to dig meaning out of a paper with the “paperback” model where the *author* must be clear—prefer the latter for code.  
+*Meaning:* The book contrasts the “scholar’s job” to dig meaning out of a paper with the “paperback” model where the *author* must be clear - prefer the latter for code.  
 *Synonyms:* researcher, academic reader (as stereotype).
 
 **Semantics** / **Semantically**  
-*Meaning:* What an operation *means*, not its spelling—two `add` methods must be *semantically* equivalent if they share the name.  
+*Meaning:* What an operation *means*, not its spelling - two `add` methods must be *semantically* equivalent if they share the name.  
 *Synonyms:* meaning, sense, behavior contract (informal).
 
 **Skim**  
@@ -192,7 +192,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* self-documenting code, “names are documentation.”
 
 **Implicity** (*coined in the chapter*)  
-*Meaning:* How much the code leaves implicit—readers must already know context the code does not state. Opposite of making things **explicit** through naming and structure.  
+*Meaning:* How much the code leaves implicit - readers must already know context the code does not state. Opposite of making things **explicit** through naming and structure.  
 *Related:* missing context, “tribal knowledge” names.
 
 **Disinformation (in names)**  
@@ -204,7 +204,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* meaningless distinction, low-signal tokens.
 
 **Mental mapping**  
-*Meaning:* The translation readers do in their heads (“`c` means the URL without scheme…”)—professional code minimizes this.  
+*Meaning:* The translation readers do in their heads (“`c` means the URL without scheme…”) - professional code minimizes this.  
 *Synonyms (idea):* cognitive decode step, name-to-concept translation.
 
 **Hungarian notation (HN)**  
@@ -212,7 +212,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* Systems Hungarian vs Apps Hungarian (not split in depth in this chapter).
 
 **Problem domain vs solution domain**  
-*Meaning:* **Problem domain:** business/real-world words (what the customer calls things). **Solution domain:** CS terms, patterns, algorithms—use when every programmer already shares that vocabulary.  
+*Meaning:* **Problem domain:** business/real-world words (what the customer calls things). **Solution domain:** CS terms, patterns, algorithms - use when every programmer already shares that vocabulary.  
 *Related:* ubiquitous language (DDD, not named in chapter).
 
 **Pick one word per concept**  
@@ -232,5 +232,5 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* `WORK_DAYS_PER_WEEK` vs bare `5`.
 
 **Accessor / mutator / predicate** (JavaBean naming)  
-*Meaning:* `getName`, `setName`, `isPosted`—verbs and prefixes aligned with common Java conventions so readers recognize roles instantly.  
+*Meaning:* `getName`, `setName`, `isPosted` - verbs and prefixes aligned with common Java conventions so readers recognize roles instantly.  
 *Related:* JavaBeans spec, boolean naming.

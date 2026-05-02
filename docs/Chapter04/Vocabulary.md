@@ -1,4 +1,4 @@
-# Chapter 4 — Vocabulary
+# Chapter 4 - Vocabulary
 
 Short definitions and common synonyms for words that appear in *Clean Code*, Chapter 4 (*Comments*), or that capture the chapter’s metaphors and warnings.
 
@@ -11,7 +11,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* emphasis, stress note, importance flag.
 
 **Anathema**  
-*Meaning:* Something strongly disliked or cursed—Javadoc on *non-public* code is *anathema* when it only adds noise.  
+*Meaning:* Something strongly disliked or cursed - Javadoc on *non-public* code is *anathema* when it only adds noise.  
 *Synonyms:* abhorrent, intolerable, poison (informal).
 
 ---
@@ -19,11 +19,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## B
 
 **Bifurcate**  
-*Meaning:* To split into two branches—code “chunks” bifurcate and merge as systems evolve while comments often fail to follow.  
+*Meaning:* To split into two branches - code “chunks” bifurcate and merge as systems evolve while comments often fail to follow.  
 *Synonyms:* fork, branch, split.
 
 **Blithely**  
-*Meaning:* Cheerfully or casually, without due care—misleading comments can make readers *blithely* assume wrong behavior.  
+*Meaning:* Cheerfully or casually, without due care - misleading comments can make readers *blithely* assume wrong behavior.  
 *Synonyms:* heedlessly, casually, unsuspectingly.
 
 ---
@@ -35,11 +35,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* hybrid, patchwork, Frankenstein (informal).
 
 **Conceit**  
-*Meaning:* An clever but self-indulgent idea—using `sqrt` as a loop bound might be a personal *conceit* not worth others’ parsing cost.  
+*Meaning:* An clever but self-indulgent idea - using `sqrt` as a loop bound might be a personal *conceit* not worth others’ parsing cost.  
 *Synonyms:* affectation, vanity, clever trick (informal).
 
 **Crufty** / **cruft**  
-*Meaning:* Old, grimy, accumulated junk—comments that rot into lies or commented-out *cruft* at the bottom of a file.  
+*Meaning:* Old, grimy, accumulated junk - comments that rot into lies or commented-out *cruft* at the bottom of a file.  
 *Synonyms:* stale, decayed, legacy mess, dregs (related).
 
 ---
@@ -51,15 +51,15 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Synonyms:* placeholder, stub, trivial implementation.
 
 **Delude**  
-*Meaning:* To mislead someone into believing what is false—inaccurate comments *delude* readers.  
+*Meaning:* To mislead someone into believing what is false - inaccurate comments *delude* readers.  
 *Synonyms:* deceive, mislead, fool.
 
 **Dogmatic**  
-*Meaning:* Asserted as absolute doctrine without nuance—*frivolous dogmatic* comments add noise, not insight.  
+*Meaning:* Asserted as absolute doctrine without nuance - *frivolous dogmatic* comments add noise, not insight.  
 *Synonyms:* rigid, preachy, formulaic.
 
 **Dregs**  
-*Meaning:* Sediment at the bottom—commented-out code gathers like *dregs*.  
+*Meaning:* Sediment at the bottom - commented-out code gathers like *dregs*.  
 *Synonyms:* residue, lees, junk pile (informal).
 
 ---
@@ -75,11 +75,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## F
 
 **Flippant**  
-*Meaning:* Treating something serious lightly—a warning comment can be *flippant* yet still make its point (“time to kill”).  
+*Meaning:* Treating something serious lightly - a warning comment can be *flippant* yet still make its point (“time to kill”).  
 *Synonyms:* glib, cheeky, casual (tone).
 
 **Frivolous**  
-*Meaning:* Lacking serious purpose—comments that clutter without adding truth.  
+*Meaning:* Lacking serious purpose - comments that clutter without adding truth.  
 *Synonyms:* trivial, silly, gratuitous (overlap).
 
 ---
@@ -87,7 +87,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## G
 
 **Gladhanding**  
-*Meaning:* Excessive friendly smooth-talk—a redundant header comment can feel like a used-car salesman *gladhanding* you past real understanding.  
+*Meaning:* Excessive friendly smooth-talk - a redundant header comment can feel like a used-car salesman *gladhanding* you past real understanding.  
 *Synonyms:* smarmy reassurance, empty reassurance, hand-waving (informal).
 
 ---
@@ -95,11 +95,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## I
 
 **Inconsequential**  
-*Meaning:* Unimportant-looking—an *amplification* comment highlights what might seem *inconsequential* but is not.  
+*Meaning:* Unimportant-looking - an *amplification* comment highlights what might seem *inconsequential* but is not.  
 *Synonyms:* trivial-seeming, minor-looking, negligible (appearance only).
 
 **Inobvious**  
-*Meaning:* Hard to see the link—an *inobvious connection* between comment and code means the comment failed.  
+*Meaning:* Hard to see the link - an *inobvious connection* between comment and code means the comment failed.  
 *Synonyms:* unclear linkage, non-apparent tie.
 
 ---
@@ -107,7 +107,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## L
 
 **Legion**  
-*Meaning:* Very great in number—a *legion* of useless Javadocs obscures Tomcat-style fields.  
+*Meaning:* Very great in number - a *legion* of useless Javadocs obscures Tomcat-style fields.  
 *Synonyms:* host, multitude, countless.
 
 ---
@@ -115,11 +115,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## M
 
 **Mandated** (comments)  
-*Meaning:* Required by policy regardless of value—*mandated* per-function Javadoc breeds noise and lies.  
+*Meaning:* Required by policy regardless of value - *mandated* per-function Javadoc breeds noise and lies.  
 *Synonyms:* compulsory, policy-forced, checkbox-driven.
 
 **Mumble** / **mumbling**  
-*Meaning:* To speak indistinctly—a rushed, vague comment is *mumbling* that leaves an enigma.  
+*Meaning:* To speak indistinctly - a rushed, vague comment is *mumbling* that leaves an enigma.  
 *Synonyms:* mutter, waffle, vague note.
 
 ---
@@ -127,7 +127,7 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## N
 
 **Nonlocal** (information)  
-*Meaning:* A comment about system facts far from the code it sits next to—likely to go stale when the distant default changes.  
+*Meaning:* A comment about system facts far from the code it sits next to - likely to go stale when the distant default changes.  
 *Synonyms:* distant, far-reaching, cross-module trivia in a local comment.
 
 ---
@@ -135,15 +135,15 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## O
 
 **Obfuscate**  
-*Meaning:* To darken or confuse—noise comments *obfuscate* instead of explain.  
+*Meaning:* To darken or confuse - noise comments *obfuscate* instead of explain.  
 *Synonyms:* cloud, muddy, obscure.
 
 **Odious**  
-*Meaning:* Repulsive—commented-out code is *odious*; delete and rely on version control.  
+*Meaning:* Repulsive - commented-out code is *odious*; delete and rely on version control.  
 *Synonyms:* repugnant, offensive, nasty.
 
 **Orphaned** (comment)  
-*Meaning:* Separated from the code it once described—*orphaned blurbs* of decreasing accuracy.  
+*Meaning:* Separated from the code it once described - *orphaned blurbs* of decreasing accuracy.  
 *Synonyms:* detached, stray, widowed (informal).
 
 ---
@@ -151,15 +151,15 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## P
 
 **Patently**  
-*Meaning:* Clearly, obviously—claiming code “seldom explains” is *patently* false to the author.  
+*Meaning:* Clearly, obviously - claiming code “seldom explains” is *patently* false to the author.  
 *Synonyms:* manifestly, obviously, plainly.
 
 **Poignant**  
-*Meaning:* Sharply felt, emotionally pointed—a *poignant* warning example (thread safety).  
+*Meaning:* Sharply felt, emotionally pointed - a *poignant* warning example (thread safety).  
 *Synonyms:* telling, striking, acute.
 
 **Propagate**  
-*Meaning:* To spread—bad comments *propagate lies* as code moves.  
+*Meaning:* To spread - bad comments *propagate lies* as code moves.  
 *Synonyms:* spread, multiply, disseminate.
 
 ---
@@ -167,11 +167,11 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## R
 
 **Recourse**  
-*Meaning:* A backup option—when a comment fails, your only *recourse* is to read other modules.  
+*Meaning:* A backup option - when a comment fails, your only *recourse* is to read other modules.  
 *Synonyms:* resort, fallback, remedy.
 
 **Redundant**  
-*Meaning:* Saying again what the code already says—redundant Javadoc adds no information.  
+*Meaning:* Saying again what the code already says - redundant Javadoc adds no information.  
 *Synonyms:* repetitive, superfluous, tautological.
 
 ---
@@ -179,14 +179,14 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 ## Phrases (chapter-specific)
 
 **Comments are a necessary evil**  
-*Meaning:* Prefer expressive code; use comments where the language or situation still leaves a gap—not as a substitute for clarity.  
+*Meaning:* Prefer expressive code; use comments where the language or situation still leaves a gap - not as a substitute for clarity.  
 *Related:* “comments are failures” (strong form in chapter).
 
 **Truth lives in the code**  
 *Meaning:* Only executable code is guaranteed current; comments drift. Treat comments skeptically and minimize them.  
 *Related:* single source of truth, executable truth.
 
-**Don’t comment bad code—rewrite it** (Kernighan & Plauger)  
+**Don’t comment bad code - rewrite it** (Kernighan & Plauger)  
 *Meaning:* Fix structure and naming instead of narrating confusion.  
 *Related:* refactor vs annotate.
 
@@ -195,23 +195,23 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* intention-revealing names, extract method.
 
 **Good comment types (chapter)**  
-*Meaning:* Legal notices; informative (when name cannot yet carry it); intent/rationale; clarification for unchangeable APIs; consequence warnings; TODO (disciplined); amplification; public API docs (Javadoc)—each with caveats.  
+*Meaning:* Legal notices; informative (when name cannot yet carry it); intent/rationale; clarification for unchangeable APIs; consequence warnings; TODO (disciplined); amplification; public API docs (Javadoc) - each with caveats.  
 *Related:* the only great comment is one you deleted by improving code.
 
 **Noise comments / journal comments**  
-*Meaning:* Restate the obvious, vent frustration, or replay change history in comments—use version control and structure instead.  
+*Meaning:* Restate the obvious, vent frustration, or replay change history in comments - use version control and structure instead.  
 *Related:* position markers, closing-brace comments, attribution bylines.
 
 **Nonlocal information**  
-*Meaning:* A comment describing distant system facts the local function does not control—likely to go stale (default port in setter Javadoc).  
+*Meaning:* A comment describing distant system facts the local function does not control - likely to go stale (default port in setter Javadoc).  
 *Related:* coupling comments to faraway code.
 
 **Commented-out code**  
-*Meaning:* Dead code left in place—scares readers from deleting and accumulates; remove it; history lives in VCS.  
+*Meaning:* Dead code left in place - scares readers from deleting and accumulates; remove it; history lives in VCS.  
 *Related:* dregs, fear of deletion.
 
 **HTML in comments**  
-*Meaning:* Markup belongs in doc generators, not hand-edited source noise—unless tooling owns formatting.  
+*Meaning:* Markup belongs in doc generators, not hand-edited source noise - unless tooling owns formatting.  
 *Related:* readability in the IDE.
 
 **Mumbling / enigma comments**  
@@ -219,5 +219,5 @@ Short definitions and common synonyms for words that appear in *Clean Code*, Cha
 *Related:* local, precise comments only.
 
 **Misleading comments**  
-*Meaning:* Worse than none—set false expectations (e.g. “returns when closed becomes true” vs actual wait/timeout behavior).  
+*Meaning:* Worse than none - set false expectations (e.g. “returns when closed becomes true” vs actual wait/timeout behavior).  
 *Related:* precision, test the comment against the code.

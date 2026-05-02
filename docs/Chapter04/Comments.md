@@ -5,17 +5,17 @@
 - [Chapter 4 index](README.md)
 
 <p align="center">
-  <img src="../../assets/images/Chapter04/Screenshot%202026-05-02%20084211.jpg" alt="Clean Code – Comments" />
+  <img src="../../assets/images/Chapter04/Screenshot%202026-05-02%20084211.jpg" alt="Clean Code - Comments" />
 </p>
 
-> “Don’t comment bad code—rewrite it.”  
-> — Brian W. Kernighan and P. J. Plaugher
+> “Don’t comment bad code - rewrite it.”  
+> - Brian W. Kernighan and P. J. Plaugher
 
-Comments can help—but they are not automatically good. The chapter argues that **the only fully accurate description of behavior is the code itself**. Comments compensate when we fail to express intent in code; that is a **failure worth fixing**, not celebrating.
+Comments can help - but they are not automatically good. The chapter argues that **the only fully accurate description of behavior is the code itself**. Comments compensate when we fail to express intent in code; that is a **failure worth fixing**, not celebrating.
 
 ## Why comments go wrong
 
-Code moves, splits, merges, and is refactored. Comments often **do not follow**, drift from truth, or sit next to the wrong lines. **Inaccurate comments are worse than none**—they delude readers and preserve old rules that no longer apply.
+Code moves, splits, merges, and is refactored. Comments often **do not follow**, drift from truth, or sit next to the wrong lines. **Inaccurate comments are worse than none** - they delude readers and preserve old rules that no longer apply.
 
 ### Orphaned comment (drift example)
 
@@ -33,7 +33,7 @@ private Locale saveLocale;
 // Example: "Tue, 02 Apr 2003 22:18:49 GMT"
 ```
 
-Other fields were inserted between the regex and the comment—classic drift.
+Other fields were inserted between the regex and the comment - classic drift.
 
 ## Comments do not make up for bad code
 
@@ -56,15 +56,15 @@ if (employee.isEligibleForFullBenefits())
 
 ## Good comments (when they earn their keep)
 
-The chapter still allows **good** comments—but the best comment is often the one you **deleted** by improving the code.
+The chapter still allows **good** comments - but the best comment is often the one you **deleted** by improving the code.
 
 ### Legal / standard headers
 
-Copyright, license pointers, authorship—often required. Keep them short; link out to full legal text when possible.
+Copyright, license pointers, authorship - often required. Keep them short; link out to full legal text when possible.
 
 ### Informative comments (sparingly)
 
-Sometimes a comment carries facts that are awkward to encode in a name yet—though renaming (`responderBeingTested`) is still preferred when it works.
+Sometimes a comment carries facts that are awkward to encode in a name yet - though renaming (`responderBeingTested`) is still preferred when it works.
 
 ```java
 // format matched kk:mm:ss EEE, MMM dd, yyyy
@@ -133,7 +133,7 @@ public void testCompareTo() throws Exception {
 }
 ```
 
-Clarifying comments can still be **wrong**—verify them carefully.
+Clarifying comments can still be **wrong** - verify them carefully.
 
 ### Warning of consequences
 
@@ -187,7 +187,7 @@ return buildList(text.substring(match.end()));
 
 ### Javadoc on public APIs
 
-Well-written public API docs are valuable—and can still become misleading like any other comment if not maintained.
+Well-written public API docs are valuable - and can still become misleading like any other comment if not maintained.
 
 ---
 
@@ -209,7 +209,7 @@ public void loadProperties() {
 
 If the reader must **hunt other modules** to know what this means, the comment failed.
 
-### Redundant (and subtly misleading) header — Listing 4-1
+### Redundant (and subtly misleading) header - Listing 4-1
 
 ```java
 // Utility method that returns when this.closed is true. Throws an exception
@@ -226,7 +226,7 @@ public synchronized void waitForClose(final long timeoutMillis)
 
 The comment is less precise than the code: the method waits up to `timeoutMillis`; it does not magically return “when `closed` becomes true” in the sense readers might assume without reading `wait`.
 
-### Noise Javadoc on fields — Listing 4-2 (excerpt)
+### Noise Javadoc on fields - Listing 4-2 (excerpt)
 
 ```java
 public abstract class ContainerBase
@@ -305,7 +305,7 @@ public abstract class ContainerBase
 }
 ```
 
-### Mandated noise — Listing 4-3
+### Mandated noise - Listing 4-3
 
 ```java
 /**
@@ -377,7 +377,7 @@ public int getDayOfMonth() {
 }
 ```
 
-### Venting instead of refactoring — Listing 4-4
+### Venting instead of refactoring - Listing 4-4
 
 ```java
 private void startSending() {
@@ -453,9 +453,9 @@ if (moduleDependees.contains(ourSubSystem))
 // Actions //////////////////////////////////
 ```
 
-Rarely worth the visual noise—especially slash “banners.”
+Rarely worth the visual noise - especially slash “banners.”
 
-### Closing-brace comments — Listing 4-6
+### Closing-brace comments - Listing 4-6
 
 ```java
 import java.io.*;
@@ -485,7 +485,7 @@ public class wc {
 }
 ```
 
-Small, well-factored functions rarely need brace labels—**shorten the function** instead.
+Small, well-factored functions rarely need brace labels - **shorten the function** instead.
 
 ### Attribution / byline comments
 
@@ -563,7 +563,7 @@ public void setFitnessePort(int fitnessePort) {
 }
 ```
 
-The setter does not own the default port constant—this comment **couples** to distant configuration.
+The setter does not own the default port constant - this comment **couples** to distant configuration.
 
 ### Too much information (RFC dump)
 
@@ -601,13 +601,13 @@ If the comment does not tie cleanly to `+1`, `*3`, and `200`, it fails its job.
 
 ### Javadoc on non-public code
 
-Heavy formal Javadoc on internal types is usually **cruft**—public APIs deserve docs; implementation details deserve clarity.
+Heavy formal Javadoc on internal types is usually **cruft** - public APIs deserve docs; implementation details deserve clarity.
 
 ---
 
-## Example: “well documented” vs cleaned — Listings 4-7 and 4-8
+## Example: “well documented” vs cleaned - Listings 4-7 and 4-8
 
-### Listing 4-7 — `GeneratePrimes.java` (problem style)
+### Listing 4-7 - `GeneratePrimes.java` (problem style)
 
 ```java
 /**
@@ -672,7 +672,7 @@ public class GeneratePrimes {
 }
 ```
 
-### Listing 4-8 — `PrimeGenerator.java` (restrained comments)
+### Listing 4-8 - `PrimeGenerator.java` (restrained comments)
 
 ```java
 /**
@@ -746,7 +746,7 @@ public class PrimeGenerator {
 }
 ```
 
-The class-level comment may still parallel the top function; the **square-root loop bound** comment is the kind that is hard to replace with a name alone—so it may earn its place.
+The class-level comment may still parallel the top function; the **square-root loop bound** comment is the kind that is hard to replace with a name alone - so it may earn its place.
 
 ## Conclusion
 
