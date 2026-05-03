@@ -1,8 +1,12 @@
 # Clean Code: A Handbook of Agile Software Craftsmanship
 
+<p align="center">
+  <img src="./assets/images/book.jpg" alt="Clean Code -  A Handbook of Agile Software Craftsmanship"  height="200" />
+</p>
+
 A simple summary of *Clean Code: A Handbook of Agile Software Craftsmanship* by Robert C. Martin.
 
-The goal is to summarize the book part by part in clear, practical language that is easy to read and use online. Chapters 1-7 include a **vocabulary** list for notable words and phrases from the text.
+The goal is to summarize the book part by part in clear, practical language that is easy to read and use online. Chapters 1-10 include a **vocabulary** list for notable words and phrases from the text.
 
 ## Chapters
 
@@ -13,6 +17,9 @@ The goal is to summarize the book part by part in clear, practical language that
 - [Chapter 5](docs/Chapter05/README.md) - [Summary](docs/Chapter05/Formatting.md) · [Vocabulary](docs/Chapter05/Vocabulary.md)
 - [Chapter 6](docs/Chapter06/README.md) - [Summary](docs/Chapter06/ObjectsAndDataStructures.md) · [Vocabulary](docs/Chapter06/Vocabulary.md)
 - [Chapter 7](docs/Chapter07/README.md) - [Summary](docs/Chapter07/ErrorHandling.md) · [Vocabulary](docs/Chapter07/Vocabulary.md)
+- [Chapter 8](docs/Chapter08/README.md) - [Summary](docs/Chapter08/Boundaries.md) · [Vocabulary](docs/Chapter08/Vocabulary.md)
+- [Chapter 9](docs/Chapter09/README.md) - [Summary](docs/Chapter09/UnitTests.md) · [Vocabulary](docs/Chapter09/Vocabulary.md)
+- [Chapter 10](docs/Chapter10/README.md) - [Summary](docs/Chapter10/Classes.md) · [Vocabulary](docs/Chapter10/Vocabulary.md)
 
 ## Table of Contents
 
