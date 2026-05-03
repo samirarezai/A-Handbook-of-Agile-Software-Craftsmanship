@@ -17,4 +17,5 @@ This site contains a simple summary of each part of *Clean Code: A Handbook of A
 - [Chapter 9](docs/Chapter09/README.md) - [Summary](docs/Chapter09/UnitTests.md) · [Vocabulary](docs/Chapter09/Vocabulary.md)
 - [Chapter 10](docs/Chapter10/README.md) - [Summary](docs/Chapter10/Classes.md) · [Vocabulary](docs/Chapter10/Vocabulary.md)
 - [Chapter 11](docs/Chapter11/README.md) - [Summary](docs/Chapter11/Systems.md) · [Vocabulary](docs/Chapter11/Vocabulary.md)
+- [Chapter 12](docs/Chapter12/README.md) - [Summary](docs/Chapter12/Emergence.md) · [Vocabulary](docs/Chapter12/Vocabulary.md)
 
