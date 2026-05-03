@@ -8,11 +8,11 @@
   <img src="../../assets/images/Chapter11/ch11.jpg" alt="Clean Code - Systems" />
 </p>
 
-Clean code at **function and class** level is not enough: many systems lack the **separation of concerns** and **layers of abstraction** that make cities work. This chapter is about staying **clean at the system level**—construction vs. use, scaling up, cross-cutting concerns, and keeping **domain logic** visible.
+Clean code at **function and class** level is not enough: many systems lack the **separation of concerns** and **layers of abstraction** that make cities work. This chapter is about staying **clean at the system level** - construction vs. use, scaling up, cross-cutting concerns, and keeping **domain logic** visible.
 
 ## How would you build a city?
 
-No one person runs every detail; cities work through **teams**, **modularity**, and **abstractions** so people can be effective without seeing the whole map. Software teams are often organized that way, but the **code** does not always follow—this chapter closes that gap.
+No one person runs every detail; cities work through **teams**, **modularity**, and **abstractions** so people can be effective without seeing the whole map. Software teams are often organized that way, but the **code** does not always follow - this chapter closes that gap.
 
 ## Separate constructing a system from using it
 
@@ -30,7 +30,7 @@ public Service getService() {
 
 **Merits:** pay construction cost only when needed, faster startup, `null` is never returned.
 
-**Problems:** hard-coded dependency on `MyServiceImpl` and everything its constructor needs—you cannot compile without resolving those dependencies even if the object is never used. **Testing** forces test doubles to be installed before the method runs, and you must test **both** the null path and the construction path—**SRP** is violated in a small way. The class also **decides** implementation in a **global** context that may not always be right. One lazy initializer is tolerable; **many** scatter global wiring with little modularity.
+**Problems:** hard-coded dependency on `MyServiceImpl` and everything its constructor needs - you cannot compile without resolving those dependencies even if the object is never used. **Testing** forces test doubles to be installed before the method runs, and you must test **both** the null path and the construction path - **SRP** is violated in a small way. The class also **decides** implementation in a **global** context that may not always be right. One lazy initializer is tolerable; **many** scatter global wiring with little modularity.
 
 **Direction:** modularize construction separately from runtime logic and adopt a **global, consistent** strategy for resolving major dependencies.
 
@@ -42,7 +42,7 @@ Move **all** construction to `main` (or modules `main` calls) and design the res
   <img src="../../assets/images/Chapter11/Separating-construction-in-main.jpg" alt="Figure 11-1: Separating construction in main()" />
 </p>
 
-**Figure 11-1** — Separating construction in `main()`.
+**Figure 11-1**: Separating construction in `main()`.
 
 ## Factories
 
@@ -52,33 +52,33 @@ Sometimes the **application** must decide **when** to create objects (for exampl
   <img src="../../assets/images/Chapter11/Separation-construction-with-factory.jpg" alt="Figure 11-2: Separating construction with factory" />
 </p>
 
-**Figure 11-2** — Separating construction with a factory.
+**Figure 11-2**: Separating construction with a factory.
 
 Dependencies still point from `main` toward the application; the app stays decoupled from how `LineItem` is built while controlling **when** instances are created and with what arguments.
 
 ## Dependency Injection
 
-**Dependency Injection (DI)** applies **Inversion of Control** to dependency management: objects should not **instantiate** their own dependencies; an **authoritative** mechanism (`main` or a **container**) does. **JNDI** lookups are a **partial** DI—the caller still actively resolves the service:
+**Dependency Injection (DI)** applies **Inversion of Control** to dependency management: objects should not **instantiate** their own dependencies; an **authoritative** mechanism (`main` or a **container**) does. **JNDI** lookups are a **partial** DI - the caller still actively resolves the service:
 
 ```java
 MyService myService = (MyService)(jndiContext.lookup("NameOfMyService"));
 ```
 
-**True DI** is more passive: the class exposes **constructors** or **setters** for dependencies; the container creates objects and wires them from **configuration** or a dedicated construction module. **Spring** is the best-known Java example (XML or programmatic wiring). Lazy creation can still exist: many containers construct on demand and support factories or **proxies** for lazy evaluation—treat lazy instantiation as an **optimization**, not a design default.
+**True DI** is more passive: the class exposes **constructors** or **setters** for dependencies; the container creates objects and wires them from **configuration** or a dedicated construction module. **Spring** is the best-known Java example (XML or programmatic wiring). Lazy creation can still exist: many containers construct on demand and support factories or **proxies** for lazy evaluation - treat lazy instantiation as an **optimization**, not a design default.
 
 > **Test doubles:** see **[Mezzaros07]** in the bibliography below.
 
 ## Scaling up
 
-Systems grow like settlements → towns → cities: roads and services expand under **real pressure**. It is a myth that software can be gotten **right the first time**; implement today’s stories, then **refactor** and expand—**TDD**, refactoring, and clean code support that at the code level.
+Systems grow like settlements → towns → cities: roads and services expand under **real pressure**. It is a myth that software can be gotten **right the first time**; implement today’s stories, then **refactor** and expand - **TDD**, refactoring, and clean code support that at the code level.
 
-At the **system** level, architecture still benefits from **incremental** growth if **separation of concerns** is preserved—software’s malleability makes that possible in ways physical construction does not.
+At the **system** level, architecture still benefits from **incremental** growth if **separation of concerns** is preserved - software’s malleability makes that possible in ways physical construction does not.
 
 ### EJB2 as a cautionary tale
 
 Early **EJB1/EJB2** did not separate concerns well and blocked organic growth. An **Entity Bean** for a `Bank` tied business logic to a **heavyweight container**, required lifecycle boilerplate, made **unit tests** painful (mock the container or deploy to a server), and hurt **reuse** and even **inheritance** between beans. **DTOs** duplicated data shapes and invited copying boilerplate.
 
-**Listing 11-1** — An EJB2 local interface for a Bank EJB
+**Listing 11-1**: An EJB2 local interface for a Bank EJB
 
 ```java
 package com.example.banking;
@@ -101,7 +101,7 @@ public interface BankLocal extends java.ejb.EJBLocalObject {
 }
 ```
 
-**Listing 11-2** — The corresponding EJB2 Entity Bean implementation
+**Listing 11-2**: The corresponding EJB2 Entity Bean implementation
 
 ```java
 package com.example.banking;
@@ -144,13 +144,13 @@ public abstract class Bank implements javax.ejb.EntityBean {
 }
 ```
 
-(The book also omits the `LocalHome` factory and XML deployment descriptors—those complete the EJB2 picture.)
+(The book also omits the `LocalHome` factory and XML deployment descriptors - those complete the EJB2 picture.)
 
-EJB2 did anticipate **declarative** transaction, security, and persistence in descriptors—**cross-cutting** in spirit.
+EJB2 did anticipate **declarative** transaction, security, and persistence in descriptors - **cross-cutting** in spirit.
 
 ## Cross-cutting concerns
 
-Persistence, security, and transactions **cut across** natural domain boundaries: you want **one** strategy (one DBMS, naming rules, transaction semantics) applied **everywhere**. The **intersection** of modular persistence with modular domain logic is still awkward—**cross-cutting concerns**.
+Persistence, security, and transactions **cut across** natural domain boundaries: you want **one** strategy (one DBMS, naming rules, transaction semantics) applied **everywhere**. The **intersection** of modular persistence with modular domain logic is still awkward - **cross-cutting concerns**.
 
 **Aspect-oriented programming (AOP)** restores modularity: **aspects** declare **where** behavior should attach; the framework applies it **noninvasively** (no hand-editing every call site).
 
@@ -158,7 +158,7 @@ Persistence, security, and transactions **cut across** natural domain boundaries
 
 JDK **dynamic proxies** suit simple cases (wrap interface methods). They only work with **interfaces**; class proxies need bytecode libraries (**CGLIB**, **ASM**, **Javassist**).
 
-**Listing 11-3** — JDK proxy example
+**Listing 11-3**: JDK proxy example
 
 ```java
 // Bank.java (suppressing package names...)
@@ -223,9 +223,9 @@ Proxies centralize interception but add **volume** and **complexity**; they also
 
 ## Pure Java AOP frameworks
 
-**Spring AOP** and **JBoss AOP** hide proxy boilerplate: business code stays in **POJOs**, and **declarative** XML or APIs attach persistence, transactions, security, caching, failover, and so on—often driving the **DI** container that builds the object graph.
+**Spring AOP** and **JBoss AOP** hide proxy boilerplate: business code stays in **POJOs**, and **declarative** XML or APIs attach persistence, transactions, security, caching, failover, and so on - often driving the **DI** container that builds the object graph.
 
-**Listing 11-4** — Spring 2.X configuration file (fragment)
+**Listing 11-4**: Spring 2.X configuration file (fragment)
 
 ```xml
 <beans>
@@ -246,13 +246,13 @@ p:dataAccessObject-ref="bankDataAccessObject"/>
 </beans>
 ```
 
-The client thinks it calls `getAccounts()` on a `Bank`, but it hits the outermost of nested **Decorator** layers around the POJO—room for transaction, caching, and other decorators.
+The client thinks it calls `getAccounts()` on a `Bank`, but it hits the outermost of nested **Decorator** layers around the POJO - room for transaction, caching, and other decorators.
 
 <p align="center">
   <img src="../../assets/images/Chapter11/Pure-Java-AOP-Frameworks.jpg" alt="Figure 11-3: The Russian doll of decorators" />
 </p>
 
-**Figure 11-3** — The “Russian doll” of decorators.
+**Figure 11-3**: The “Russian doll” of decorators.
 
 ```java
 XmlBeanFactory bf =
@@ -260,9 +260,9 @@ new XmlBeanFactory(new ClassPathResource("app.xml", getClass()));
 Bank bank = (Bank) bf.getBean("bank");
 ```
 
-Few Spring-specific lines keep the application **decoupled** from the framework—contrasting sharply with EJB2 coupling. Verbose XML still expresses **policy** more simply than hand-written proxy graphs; **EJB3** largely followed this declarative, POJO-friendly model (annotations and/or XML).
+Few Spring-specific lines keep the application **decoupled** from the framework - contrasting sharply with EJB2 coupling. Verbose XML still expresses **policy** more simply than hand-written proxy graphs; **EJB3** largely followed this declarative, POJO-friendly model (annotations and/or XML).
 
-**Listing 11-5** — An EJB3 Bank EJB (JPA-style)
+**Listing 11-5**: An EJB3 Bank EJB (JPA-style)
 
 ```java
 package com.example.banking.model;
@@ -306,33 +306,33 @@ public class Bank implements java.io.Serializable {
 }
 ```
 
-Mapping can live in annotations or external descriptors—either way the **core** stays far cleaner than EJB2.
+Mapping can live in annotations or external descriptors - either way the **core** stays far cleaner than EJB2.
 
 ## AspectJ aspects
 
-**AspectJ** is the fullest aspect language—rich toolset, adoption cost (tools, language). **Annotation-style** AspectJ and Spring integration lower the bar; Spring/JBoss “pure Java” AOP covers many common cases.
+**AspectJ** is the fullest aspect language - rich toolset, adoption cost (tools, language). **Annotation-style** AspectJ and Spring integration lower the bar; Spring/JBoss “pure Java” AOP covers many common cases.
 
 ## Test drive the system architecture
 
-If **domain logic** is **POJOs** and infrastructure attaches through **minimal**, aspect-like mechanisms, you can **evolve** architecture from simple to sophisticated and swap technologies **on demand**—without mandatory **BDUF**. BDUF is harmful when it resists change; physical buildings cannot pivot as cheaply—**software physics** still allows radical change when structure separates concerns.
+If **domain logic** is **POJOs** and infrastructure attaches through **minimal**, aspect-like mechanisms, you can **evolve** architecture from simple to sophisticated and swap technologies **on demand** - without mandatory **BDUF**. BDUF is harmful when it resists change; physical buildings cannot pivot as cheaply - **software physics** still allows radical change when structure separates concerns.
 
-Large sites scale with caching, security, virtualization—enabled by **loose coupling** and simplicity at each level. Teams still need **goals** and **coarse structure**, but must preserve **course correction**.
+Large sites scale with caching, security, virtualization - enabled by **loose coupling** and simplicity at each level. Teams still need **goals** and **coarse structure**, but must preserve **course correction**.
 
 Over-engineered APIs (early EJB among them) steal focus from user stories; a good framework **disappears** most of the time.
 
-**Recap:** modular **domains of concern** implemented with **POJOs**, integrated with **low-invasive** aspects or similar tools—**architecture can be test-driven** like code.
+**Recap:** modular **domains of concern** implemented with **POJOs**, integrated with **low-invasive** aspects or similar tools - **architecture can be test-driven** like code.
 
 ## Optimize decision making
 
-Modularity enables **decentralized** decisions. Give work to the **most qualified** people—and **postpone** decisions until the last responsible moment so they use the **best information**. Premature decisions are made with **less** customer feedback and implementation learning. POJO systems with separated concerns support **just-in-time**, simpler choices.
+Modularity enables **decentralized** decisions. Give work to the **most qualified** people - and **postpone** decisions until the last responsible moment so they use the **best information**. Premature decisions are made with **less** customer feedback and implementation learning. POJO systems with separated concerns support **just-in-time**, simpler choices.
 
 ## Use standards wisely, when they add demonstrable value
 
-Construction benefits from mature **standards**; software standards ease hiring and reuse—but **slavish** adoption (EJB2 because it was “the standard”) can miss customer value. Standards can lag industry or drift from real needs.
+Construction benefits from mature **standards**; software standards ease hiring and reuse - but **slavish** adoption (EJB2 because it was “the standard”) can miss customer value. Standards can lag industry or drift from real needs.
 
 ## Systems need domain-specific languages
 
-Mature domains have **vocabulary** and **idioms**. **Domain-Specific Languages (DSLs)**—small languages or fluent APIs—let code read like structured prose a domain expert recognizes, shrinking the gap between **concept** and **implementation** (agile communication parallels). Effective DSLs raise **abstraction** above raw idioms and patterns and let **all** levels be expressed as POJOs where appropriate.
+Mature domains have **vocabulary** and **idioms**. **Domain-Specific Languages (DSLs)** - small languages or fluent APIs - let code read like structured prose a domain expert recognizes, shrinking the gap between **concept** and **implementation** (agile communication parallels). Effective DSLs raise **abstraction** above raw idioms and patterns and let **all** levels be expressed as POJOs where appropriate.
 
 ## Bibliography (chapter references)
 
@@ -355,4 +355,4 @@ Mature domains have **vocabulary** and **idioms**. **Domain-Specific Languages (
 
 ## Conclusion
 
-**Systems must be clean.** Invasive architecture **drowns** domain logic, hides bugs, and slows stories—**agility** and **TDD** benefits erode. Keep **intent** clear at every abstraction: **POJOs** for domain truth, **aspect-like** machinery for everything else **noninvasively**. Whether designing systems or modules, prefer the **simplest thing that can possibly work**.
+**Systems must be clean.** Invasive architecture **drowns** domain logic, hides bugs, and slows stories - **agility** and **TDD** benefits erode. Keep **intent** clear at every abstraction: **POJOs** for domain truth, **aspect-like** machinery for everything else **noninvasively**. Whether designing systems or modules, prefer the **simplest thing that can possibly work**.

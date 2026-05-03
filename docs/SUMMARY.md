@@ -16,4 +16,5 @@
 - [Chapter 10](docs/Chapter10/README.md) - [Summary](docs/Chapter10/Classes.md) · [Vocabulary](docs/Chapter10/Vocabulary.md)
 - [Chapter 11](docs/Chapter11/README.md) - [Summary](docs/Chapter11/Systems.md) · [Vocabulary](docs/Chapter11/Vocabulary.md)
 - [Chapter 12](docs/Chapter12/README.md) - [Summary](docs/Chapter12/Emergence.md) · [Vocabulary](docs/Chapter12/Vocabulary.md)
+- [Chapter 13](docs/Chapter13/README.md) - [Summary](docs/Chapter13/Concurrency.md) · [Vocabulary](docs/Chapter13/Vocabulary.md)
 

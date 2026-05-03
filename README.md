@@ -6,7 +6,7 @@
 
 A simple summary of *Clean Code: A Handbook of Agile Software Craftsmanship* by Robert C. Martin.
 
-The goal is to summarize the book part by part in clear, practical language that is easy to read and use online. Chapters 1-12 include a **vocabulary** list for notable words and phrases from the text.
+The goal is to summarize the book part by part in clear, practical language that is easy to read and use online. Chapters 1-13 include a **vocabulary** list for notable words and phrases from the text.
 
 ## Chapters
 
@@ -22,6 +22,7 @@ The goal is to summarize the book part by part in clear, practical language that
 - [Chapter 10](docs/Chapter10/README.md) - [Summary](docs/Chapter10/Classes.md) · [Vocabulary](docs/Chapter10/Vocabulary.md)
 - [Chapter 11](docs/Chapter11/README.md) - [Summary](docs/Chapter11/Systems.md) · [Vocabulary](docs/Chapter11/Vocabulary.md)
 - [Chapter 12](docs/Chapter12/README.md) - [Summary](docs/Chapter12/Emergence.md) · [Vocabulary](docs/Chapter12/Vocabulary.md)
+- [Chapter 13](docs/Chapter13/README.md) - [Summary](docs/Chapter13/Concurrency.md) · [Vocabulary](docs/Chapter13/Vocabulary.md)
 
 ## Table of Contents
 

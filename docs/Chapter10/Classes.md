@@ -18,11 +18,11 @@ Following the standard Java convention, a class should begin with a list of vari
 
 ## Encapsulation
 
-Keep variables and utility functions **private**, but not fanatically. Sometimes a variable or helper must be **protected** (or package scope) so a test in the same package can call it. **Tests rule**—first try to preserve privacy; loosening encapsulation is a **last resort**.
+Keep variables and utility functions **private**, but not fanatically. Sometimes a variable or helper must be **protected** (or package scope) so a test in the same package can call it. **Tests rule** - first try to preserve privacy; loosening encapsulation is a **last resort**.
 
 ## Classes should be small
 
-The first rule of classes is that they should be **small**. The second rule is that they should be **smaller than that**. As with **functions**, smaller is the primary rule—but **size is not counted in lines**. We count **responsibilities**.
+The first rule of classes is that they should be **small**. The second rule is that they should be **smaller than that**. As with **functions**, smaller is the primary rule - but **size is not counted in lines**. We count **responsibilities**.
 
 > Footnote: responsibility counting ties to **RDD** (Responsibility-Driven Design) in the book’s references.
 
@@ -98,11 +98,11 @@ MetaObject target, MetaObject pasted, MetaProject project)
 
 Most developers would agree that `SuperDashboard` is too large; some would call it a **God class**.
 
-But what if `SuperDashboard` contained only the methods in Listing 10-2? **Five methods** is not too many by count—yet it **can** still be too much, because those methods can represent **too many responsibilities**.
+But what if `SuperDashboard` contained only the methods in Listing 10-2? **Five methods** is not too many by count - yet it **can** still be too much, because those methods can represent **too many responsibilities**.
 
 ### Naming and the “25 words” rule
 
-The **name** of a class should describe what responsibilities it fulfills; naming is often the first way to judge size. If you cannot derive a **concise** name, the class is likely too large. Ambiguous names—and weasel words like **Processor**, **Manager**, or **Super**—often hint at bad aggregation of responsibilities.
+The **name** of a class should describe what responsibilities it fulfills; naming is often the first way to judge size. If you cannot derive a **concise** name, the class is likely too large. Ambiguous names - and weasel words like **Processor**, **Manager**, or **Super** - often hint at bad aggregation of responsibilities.
 
 You should be able to write a **brief class description** in about **25 words** without using **if**, **and**, **or**, or **but**. The book’s example: *“The SuperDashboard provides access to the component that last held the focus, **and** it also allows us to track the version and build numbers.”* That **and** signals **too many responsibilities**.
 
@@ -133,11 +133,11 @@ public class SuperDashboard extends JFrame implements MetaDataUser
 
 ## The Single Responsibility Principle (SRP)
 
-The **Single Responsibility Principle** states that a class or module should have **one, and only one, reason to change**. That gives both a definition of **responsibility** and a guideline for class size: **one responsibility—one reason to change**.
+The **Single Responsibility Principle** states that a class or module should have **one, and only one, reason to change**. That gives both a definition of **responsibility** and a guideline for class size: **one responsibility - one reason to change**.
 
 > Read more in **[PPP]** (*Agile Software Development: Principles, Patterns, and Practices*).
 
-The small `SuperDashboard` in Listing 10-2 still has **two** reasons to change: (1) **version information** that changes when the software ships, and (2) **Java Swing** concerns (`JFrame`). You might change version data without touching Swing, or the reverse is not always true—so the concerns are not the same axis of change.
+The small `SuperDashboard` in Listing 10-2 still has **two** reasons to change: (1) **version information** that changes when the software ships, and (2) **Java Swing** concerns (`JFrame`). You might change version data without touching Swing, or the reverse is not always true - so the concerns are not the same axis of change.
 
 Extracting version behavior into a dedicated type clarifies the model and improves reuse.
 
@@ -151,11 +151,11 @@ public class Version {
 }
 ```
 
-SRP is one of the more important ideas in OO design and one of the simpler to state—yet it is **often violated**. Getting software to **work** and making software **clean** are different activities; many people stop when it works and never return to split overstuffed classes. Others fear many small classes will obscure the big picture—but a system has a fixed amount of logic; **small, labeled drawers** beat a few drawers full of mixed junk. Prefer **many small classes**, each with one responsibility, collaborating to produce behavior.
+SRP is one of the more important ideas in OO design and one of the simpler to state - yet it is **often violated**. Getting software to **work** and making software **clean** are different activities; many people stop when it works and never return to split overstuffed classes. Others fear many small classes will obscure the big picture - but a system has a fixed amount of logic; **small, labeled drawers** beat a few drawers full of mixed junk. Prefer **many small classes**, each with one responsibility, collaborating to produce behavior.
 
 ## Cohesion
 
-Classes should have a **small number** of instance variables. Each method should manipulate **one or more** of those variables; in general, the **more** fields a method touches, the **more cohesive** it is to its class. If **every** variable is used by **every** method, cohesion is maximal. That extreme is neither advisable nor usually possible—but you still want **high** cohesion: methods and variables **co-depend** and read as one logical whole.
+Classes should have a **small number** of instance variables. Each method should manipulate **one or more** of those variables; in general, the **more** fields a method touches, the **more cohesive** it is to its class. If **every** variable is used by **every** method, cohesion is maximal. That extreme is neither advisable nor usually possible - but you still want **high** cohesion: methods and variables **co-depend** and read as one logical whole.
 
 ### Listing 10-4 - `Stack.java` (a cohesive class)
 
@@ -183,19 +183,19 @@ public class Stack {
 }
 ```
 
-Of the three methods, only `size()` fails to use **both** variables—still a cohesive class.
+Of the three methods, only `size()` fails to use **both** variables - still a cohesive class.
 
 Keeping functions small and parameter lists short can produce **many instance variables** touched by only **some** methods. That pattern usually means **another class** is trying to escape: split variables and methods so new classes are **more cohesive**.
 
 ### Maintaining cohesion results in many small classes
 
-Breaking a large function into smaller ones often **creates** more classes. If an extracted fragment needs four locals from the parent function, one shortcut is to promote those locals to **instance fields** so extraction needs no parameters—but that can **lower cohesion** as unrelated fields accumulate.
+Breaking a large function into smaller ones often **creates** more classes. If an extracted fragment needs four locals from the parent function, one shortcut is to promote those locals to **instance fields** so extraction needs no parameters - but that can **lower cohesion** as unrelated fields accumulate.
 
 If a **few functions** share a **subset** of variables, that subset is often a **class in its own right**. When cohesion drops, **split** the class. Refactoring a big function into small pieces is therefore a common path to **better structure** and **transparency**.
 
 The book uses Knuth’s **PrintPrimes** (from *Literate Programming*) as a demonstration: a single sprawling routine versus a factored design.
 
-> Reference: **[Knuth92]** — Knuth, *Literate Programming*, CSLI, 1992.
+> Reference: **[Knuth92]**: Knuth, *Literate Programming*, CSLI, 1992.
 
 ### Listing 10-5 - `PrintPrimes.java`
 
@@ -275,7 +275,7 @@ public class PrintPrimes {
 
 Listings 10-6 through 10-8 show the same behavior refactored into **smaller classes and functions** with clearer names. The refactored program is **longer** in lines: longer identifiers, declarations as **commentary**, and whitespace for readability.
 
-Responsibilities split roughly as: **`PrimePrinter`**—execution / entry (would change if invocation became a SOAP service, etc.); **`RowColumnPagePrinter`**—row/column/page layout; **`PrimeGenerator`**—prime generation (static scope hiding algorithm state). The refactor was **not a rewrite from scratch**: the book describes driving the change with a **test suite** and **tiny steps**, preserving behavior.
+Responsibilities split roughly as: **`PrimePrinter`** - execution / entry (would change if invocation became a SOAP service, etc.); **`RowColumnPagePrinter`** - row/column/page layout; **`PrimeGenerator`** - prime generation (static scope hiding algorithm state). The refactor was **not a rewrite from scratch**: the book describes driving the change with a **test suite** and **tiny steps**, preserving behavior.
 
 ### Listing 10-6 - `PrimePrinter.java` (refactored)
 
@@ -471,9 +471,9 @@ public class Sql {
 }
 ```
 
-`Sql` generates SQL from metadata. Adding **update** support means **opening** this class—any edit can break unrelated behavior, so the whole class must be **re-tested**. The class must change when you add a **new statement type** and when you **alter one type’s details** (e.g. subselects in `select`). **Two reasons to change** implies an **SRP violation**.
+`Sql` generates SQL from metadata. Adding **update** support means **opening** this class - any edit can break unrelated behavior, so the whole class must be **re-tested**. The class must change when you add a **new statement type** and when you **alter one type’s details** (e.g. subselects in `select`). **Two reasons to change** implies an **SRP violation**.
 
-Private helpers that only relate to **one** feature (e.g. `selectWithCriteria`) are a **heuristic** for splits—but the real driver is **change pressure**. If `Sql` is “done” and update is not on the horizon, leaving it alone can be fine. Once you keep **opening** it, **fix the design**.
+Private helpers that only relate to **one** feature (e.g. `selectWithCriteria`) are a **heuristic** for splits - but the real driver is **change pressure**. If `Sql` is “done” and update is not on the horizon, leaving it alone can be fine. Once you keep **opening** it, **fix the design**.
 
 ### Listing 10-10 - A set of closed classes
 
@@ -536,9 +536,9 @@ public class ColumnList {
 }
 ```
 
-Per-class logic becomes **simple**; comprehension time and cross-function break risk drop; tests can target **isolated** pieces. Adding **update** becomes a new subclass (e.g. **`UpdateSql`**) without modifying existing classes—supporting **SRP** and the **Open-Closed Principle (OCP)**.
+Per-class logic becomes **simple**; comprehension time and cross-function break risk drop; tests can target **isolated** pieces. Adding **update** becomes a new subclass (e.g. **`UpdateSql`**) without modifying existing classes - supporting **SRP** and the **Open-Closed Principle (OCP)**.
 
-> **OCP:** Classes should be **open for extension** but **closed for modification**—again discussed at length in **[PPP]**.
+> **OCP:** Classes should be **open for extension** but **closed for modification** - again discussed at length in **[PPP]**.
 
 The goal is to **touch little** when evolving: ideally add behavior by **extension**, not by scattering edits across existing code.
 
@@ -592,7 +592,7 @@ public class PortfolioTest {
 
 Decoupling for tests usually improves **flexibility** and **reuse**; dependencies on **abstractions** rather than details reflect the **Dependency Inversion Principle (DIP)**.
 
-> **DIP:** Classes should depend upon **abstractions**, not **concrete details**—see **[PPP]**.
+> **DIP:** Classes should depend upon **abstractions**, not **concrete details** - see **[PPP]**.
 
 `StockExchange` isolates **how** a price is obtained; `Portfolio` depends on the **concept**, not on `TokyoStockExchange` specifics.
 
