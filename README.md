@@ -25,6 +25,8 @@ The goal is to summarize the book part by part in clear, practical language that
 - [Chapter 13](docs/Chapter13/Concurrency.md) - [Vocabulary](docs/Chapter13/Vocabulary.md)
 - [Chapter 14](docs/Chapter14/SuccessiveRefinement.md) - [Vocabulary](docs/Chapter14/Vocabulary.md)
 - [Chapter 15](docs/Chapter15/JUnitInternals.md) - [Vocabulary](docs/Chapter15/Vocabulary.md)
+- [Chapter 16](docs/Chapter16/RefactoringSerialDate.md) - [Vocabulary](docs/Chapter16/Vocabulary.md)
+- [Chapter 17](docs/Chapter17/SmellsAndHeuristics.md) - [Vocabulary](docs/Chapter17/Vocabulary.md)
 
 ## Table of Contents
 
